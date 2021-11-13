@@ -1,4 +1,5 @@
 import copy
+import random
 
 
 class Grid:
@@ -84,7 +85,7 @@ class Grid:
             pass
 
     def create_new_piece(self):
-        self.piece = str(input())
+        self.piece = random.choice(['O', 'I', 'S', 'Z', 'L', 'J', 'T'])
         self.current_piece = []
         self.current_piece = copy.deepcopy(Grid.start_pieces[self.piece])
         self.current_max_rotation = len(Grid.start_pieces[self.piece])
